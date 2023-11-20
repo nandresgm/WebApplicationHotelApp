@@ -1,0 +1,107 @@
+﻿@model IEnumerable<WebApplicationHotelApp.Models.TipoHabitacion.TipoHabitacion>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalle Tipo De Habitaciones</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo tipo de habitaciones</a>
+</p>
+<table class="table" style="color: #ffffff;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreTipoHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tamanio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vistas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comodidades)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagenes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disponibilidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotasAdicionales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoliticaCancelacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpcionReserva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreTipoHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tamanio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vistas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comodidades)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagenes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disponibilidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotasAdicionales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoliticaCancelacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpcionReserva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

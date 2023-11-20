@@ -1,0 +1,91 @@
+﻿@model WebApplicationHotelApp.Models.TipoHabitacion.TipoHabitacion
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Crear Tipo Habitacion</h1>
+
+<h4>TipoHabitacion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreTipoHabitacion" class="control-label"></label>
+                <input asp-for="NombreTipoHabitacion" class="form-control" />
+                <span asp-validation-for="NombreTipoHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Capacidad" class="control-label"></label>
+                <input asp-for="Capacidad" class="form-control" />
+                <span asp-validation-for="Capacidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tamanio" class="control-label"></label>
+                <input asp-for="Tamanio" class="form-control" />
+                <span asp-validation-for="Tamanio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vistas" class="control-label"></label>
+                <input asp-for="Vistas" class="form-control" />
+                <span asp-validation-for="Vistas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comodidades" class="control-label"></label>
+                <input asp-for="Comodidades" class="form-control" />
+                <span asp-validation-for="Comodidades" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagenes" class="control-label"></label>
+                <input asp-for="Imagenes" class="form-control" />
+                <span asp-validation-for="Imagenes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Disponibilidad" class="control-label"></label>
+                <input asp-for="Disponibilidad" class="form-control" />
+                <span asp-validation-for="Disponibilidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotasAdicionales" class="control-label"></label>
+                <input asp-for="NotasAdicionales" class="form-control" />
+                <span asp-validation-for="NotasAdicionales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PoliticaCancelacion" class="control-label"></label>
+                <input asp-for="PoliticaCancelacion" class="form-control" />
+                <span asp-validation-for="PoliticaCancelacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpcionReserva" class="control-label"></label>
+                <input asp-for="OpcionReserva" class="form-control" />
+                <span asp-validation-for="OpcionReserva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdHabitacion" class="control-label"></label>
+                <input asp-for="IdHabitacion" class="form-control" />
+                <span asp-validation-for="IdHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCliente" class="control-label"></label>
+                <input asp-for="IdCliente" class="form-control" />
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver al maestro tipo de habitaciones</a>
+</div>
+

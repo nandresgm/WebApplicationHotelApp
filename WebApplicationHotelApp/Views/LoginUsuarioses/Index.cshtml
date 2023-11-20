@@ -1,0 +1,36 @@
+﻿@model WebApplicationHotelApp.Models.LoginUsuarios.LoginUsuarios
+
+@{
+    Layout = null;
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplicationHotelApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplicationHotelApp.styles.css" asp-append-version="true" />
+</head>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="login">
+            <h1>Login</h1>
+            <form asp-action="IniciarSesion">
+                <div class="form-group">
+
+                    <input asp-for="user" class="form-control" />
+                    <span asp-validation-for="user" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+
+                    <input type="password" asp-for="llave" class="form-control" />
+                    <span asp-validation-for="llave" class="text-danger"></span>
+                </div>
+                <button type="submit" value="IniciarSesion" class="btn btn-primary btn-block btn-large">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div>
+

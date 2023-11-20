@@ -1,0 +1,77 @@
+﻿@model WebApplicationHotelApp.Models.Reserva.Reserva
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar Reserva</h1>
+
+<h4>Reserva</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="FechaReserva" class="control-label"></label>
+                <input asp-for="FechaReserva" class="form-control" />
+                <span asp-validation-for="FechaReserva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreCliente" class="control-label"></label>
+                <input asp-for="NombreCliente" class="form-control" />
+                <span asp-validation-for="NombreCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroTelefonoCliente" class="control-label"></label>
+                <input asp-for="NumeroTelefonoCliente" class="form-control" />
+                <span asp-validation-for="NumeroTelefonoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorreoElectronicoCliente" class="control-label"></label>
+                <input asp-for="CorreoElectronicoCliente" class="form-control" />
+                <span asp-validation-for="CorreoElectronicoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaLlegada" class="control-label"></label>
+                <input asp-for="FechaLlegada" class="form-control" />
+                <span asp-validation-for="FechaLlegada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaSalida" class="control-label"></label>
+                <input asp-for="FechaSalida" class="form-control" />
+                <span asp-validation-for="FechaSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroHabitacion" class="control-label"></label>
+                <input asp-for="NumeroHabitacion" class="form-control" />
+                <span asp-validation-for="NumeroHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoHabitacion" class="control-label"></label>
+                <input asp-for="TipoHabitacion" class="form-control" />
+                <span asp-validation-for="TipoHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetodoPago" class="control-label"></label>
+                <input asp-for="MetodoPago" class="form-control" />
+                <span asp-validation-for="MetodoPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPagar" class="control-label"></label>
+                <input asp-for="TotalPagar" class="form-control" />
+                <span asp-validation-for="TotalPagar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ediatr" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver al maestro de reservas</a>
+</div>
+

@@ -1,0 +1,76 @@
+﻿@model WebApplicationHotelApp.Models.ComboHabitaciones.ComboHabitacion
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Crear Nuevo Combo Habitacion</h1>
+
+<h4>ComboHabitacion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreCombo" class="control-label"></label>
+                <input asp-for="NombreCombo" class="form-control" />
+                <span asp-validation-for="NombreCombo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DuracionEstadia" class="control-label"></label>
+                <input asp-for="DuracionEstadia" class="form-control" />
+                <span asp-validation-for="DuracionEstadia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comodidades" class="control-label"></label>
+                <input asp-for="Comodidades" class="form-control" />
+                <span asp-validation-for="Comodidades" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Disponibilidad" class="control-label"></label>
+                <input asp-for="Disponibilidad" class="form-control" />
+                <span asp-validation-for="Disponibilidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cancelacion" class="control-label"></label>
+                <input asp-for="Cancelacion" class="form-control" />
+                <span asp-validation-for="Cancelacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservacion" class="control-label"></label>
+                <input asp-for="Reservacion" class="form-control" />
+                <span asp-validation-for="Reservacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotasAdicionales" class="control-label"></label>
+                <input asp-for="NotasAdicionales" class="form-control" />
+                <span asp-validation-for="NotasAdicionales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoPromo" class="control-label"></label>
+                <input asp-for="CodigoPromo" class="form-control" />
+                <span asp-validation-for="CodigoPromo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpcionesPersonalizadas" class="control-label"></label>
+                <input asp-for="OpcionesPersonalizadas" class="form-control" />
+                <span asp-validation-for="OpcionesPersonalizadas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver Al Maestro De Combo Habitaciones</a>
+</div>
+

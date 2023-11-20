@@ -1,0 +1,52 @@
+﻿@model WebApplicationHotelApp.Models.DetalleFacturas.DetalleFactura
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar detalle de facturas</h1>
+
+<h3>esta seguro que desea eliminar esta factura?</h3>
+<div>
+    <h4>DetalleFactura</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdHabitacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdHabitacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CostosAdicionales)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CostosAdicionales)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalPagar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalPagar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdFactura)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdFactura)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver al maestro detalle de facturas</a>
+    </form>
+</div>

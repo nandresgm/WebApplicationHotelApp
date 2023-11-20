@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplicationHotelApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplicationHotelApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span asp-area="" asp-controller="Home" asp-action="Index" class="fs-5 d-none d-sm-inline">Hotel App</span>
+                           
+                        </a>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                           @*  <li class="nav-item">
+                                <a asp-area ="" asp-controller="Usuarios" asp-action="Index" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span>
+                                </a>
+                            </li> *@
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Hotels" asp-action="Index" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Hoteles</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Empleadoes" asp-action="Index" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Empleados</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="TipoDocumentos" asp-action="Index" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Tipo Documentos</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Clientes" asp-action="Index" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Clientes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Maestro Habitaciones</span>
+                                </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a asp-area="" asp-controller="Habitacions" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Habitaciones</span></a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="ComboHabitaciones" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Combo Habitaciones</span></a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="DetallesHabitaciones" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Detalle Habitaciones</span></a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="TipoHabitaciones" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Tipo Habitaciones</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Maestro Facturas</span>
+                                </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a asp-area="" asp-controller="DetalleFacturas" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Detalle</span> Facturas</a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Facturas" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Facturas</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Maestro De Reservas</span>
+                                </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li>
+                                        <a asp-area="" asp-controller="Reservas" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Reservas</span> </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="DetalleReservas" asp-action="Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Detalle de reservas</span> </a>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Home" asp-action="Salir" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Salir</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col py-3">
+
+                    <div class="container">
+                        <main role="main" class="pb-3">
+                            @{
+                                var errorMesage = TempData["errorMesage"]?.ToString();
+                                var successMesage = TempData["errorMesage"]?.ToString();
+                            }
+
+                            @if (!string.IsNullOrWhiteSpace(@successMesage))
+                            {
+                                <div class="alert alert-success">
+                                    <b>Exitoso:</b>@successMesage
+                                    <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(@errorMesage))
+                            {
+                                <div class="alert alert-success">
+                                    <b>Exitoso:</b>@errorMesage
+                                    <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            }
+                          
+                            @RenderBody()
+                        </main>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+   
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

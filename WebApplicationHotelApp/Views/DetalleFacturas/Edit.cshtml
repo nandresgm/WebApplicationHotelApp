@@ -1,0 +1,52 @@
+﻿@model WebApplicationHotelApp.Models.DetalleFacturas.DetalleFactura
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar detalle de facturas</h1>
+
+<h4>DetalleFactura</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="IdCliente" class="control-label"></label>
+                <input asp-for="IdCliente" class="form-control" />
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdHabitacion" class="control-label"></label>
+                <input asp-for="IdHabitacion" class="form-control" />
+                <span asp-validation-for="IdHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostosAdicionales" class="control-label"></label>
+                <input asp-for="CostosAdicionales" class="form-control" />
+                <span asp-validation-for="CostosAdicionales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPagar" class="control-label"></label>
+                <input asp-for="TotalPagar" class="form-control" />
+                <span asp-validation-for="TotalPagar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdFactura" class="control-label"></label>
+                <input asp-for="IdFactura" class="form-control" />
+                <span asp-validation-for="IdFactura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver al maestro detalle de facturas</a>
+</div>
+

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebApplicationHotelApp.Models.TipoDocumento.TipoDocumento>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalle De Tipo De Documentos</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo tipo de documento</a>
+</p>
+<table class="table" style="color: #ffffff;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Documento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Documento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

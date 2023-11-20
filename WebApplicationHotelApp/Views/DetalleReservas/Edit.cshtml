@@ -1,0 +1,62 @@
+﻿@model WebApplicationHotelApp.Models.DetalleReserva.DetalleReserva
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar Detalle Reserva</h1>
+
+<h4>DetalleReserva</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="IdReserva" class="control-label"></label>
+                <input asp-for="IdReserva" class="form-control" />
+                <span asp-validation-for="IdReserva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CantidaadNoches" class="control-label"></label>
+                <input asp-for="CantidaadNoches" class="form-control" />
+                <span asp-validation-for="CantidaadNoches" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoHabitacion" class="control-label"></label>
+                <input asp-for="TipoHabitacion" class="form-control" />
+                <span asp-validation-for="TipoHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CantidadPersonas" class="control-label"></label>
+                <input asp-for="CantidadPersonas" class="form-control" />
+                <span asp-validation-for="CantidadPersonas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaLlegada" class="control-label"></label>
+                <input asp-for="FechaLlegada" class="form-control" />
+                <span asp-validation-for="FechaLlegada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaSalida" class="control-label"></label>
+                <input asp-for="FechaSalida" class="form-control" />
+                <span asp-validation-for="FechaSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioTotal" class="control-label"></label>
+                <input asp-for="PrecioTotal" class="form-control" />
+                <span asp-validation-for="PrecioTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver al maestro detalle de reservas</a>
+</div>
+

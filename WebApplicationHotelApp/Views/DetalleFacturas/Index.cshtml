@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebApplicationHotelApp.Models.DetalleFacturas.DetalleFactura>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalle Facturas</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo detalle de facturas</a>
+</p>
+<table class="table" style="color: #ffffff;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostosAdicionales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPagar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdFactura)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostosAdicionales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPagar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdFactura)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

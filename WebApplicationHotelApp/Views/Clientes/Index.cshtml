@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WebApplicationHotelApp.Models.Clientes.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Maestro De Clientes</h1>
+
+<p>
+    <a asp-action="Create">Crear Nuevo Cliente</a>
+</p>
+<table class="table" style="color: #ffffff;">
+    <thead>
+        <tr><th>
+                Botones
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTipoDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorreoElectronico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdReserva)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorreoElectronico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdReserva)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
